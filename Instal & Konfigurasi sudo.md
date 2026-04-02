@@ -30,8 +30,10 @@ reboot
 
 ## Konfirmasi
 
-```
+```bash
 sudo whoami
+
+# masukkan password user (bukan password root)
 ```
 
 Output:
