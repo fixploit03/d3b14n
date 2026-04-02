@@ -41,3 +41,7 @@ Output:
 ```
 root
 ```
+
+<div align="right">
+  <p>[<a href="https://github.com/fixploit03/Belajar-Debian">Kembali</a>]</p>
+</div>
