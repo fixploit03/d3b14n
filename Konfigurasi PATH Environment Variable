@@ -13,4 +13,5 @@ export PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"
 
 save dan keluar dengan CTRL+X, Y, Enter
 
+chmod +x /etc/profile.d/set-path.sh
 source /etc/profile
