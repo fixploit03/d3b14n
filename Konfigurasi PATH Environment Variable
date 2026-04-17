@@ -4,7 +4,7 @@ Konfigurasi PATH Environment Variable
 Perintah:
 ---------
 
-su
+su -
 nano /etc/profile.d/set-path.sh
 
 isi dengan
