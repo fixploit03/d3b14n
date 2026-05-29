@@ -2,10 +2,11 @@
 
 config=/etc/network/interfaces
 
-# backup
-cp "${config}" "${config}.bak"
+if [[ -f "${config}" ]]; then
+    # backup
+    cp "${config}" "${config}.bak"
 
-cat <<EOF> "${config}"
+    cat <<EOF> "${config}"
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
@@ -23,4 +24,5 @@ iface eth0 inet dhcp
 #iface eth0 inet6 auto
 EOF
 
-systemctl restart networking
+    systemctl restart networking
+fi
