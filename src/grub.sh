@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source cek_root.sh
-
 file="/etc/default/grub"
 status=0
 
