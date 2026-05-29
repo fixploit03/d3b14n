@@ -17,7 +17,7 @@ if [[ -f "${file}" ]]; then
 	fi
 
 	if [[ "${status}" -eq 1 ]]; then
-		update-grub
-		reboot
+		/sbin/grub-mkconfig -o /boot/grub/grub.cfg
+		/sbin/reboot
 	fi
 fi
