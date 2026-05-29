@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source cek_root.sh
+bash konfigurasi_repositori.sh
 bash update_system.sh
 bash instal_sudo.sh
 bash konfigurasi_path_environment_variable.sh
