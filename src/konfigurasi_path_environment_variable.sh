@@ -1,6 +1,8 @@
 #!/bin/bash
 
-path=/etc/profile.d/set-path.sh
+config=/etc/profile.d/set-path.sh
 
-echo 'export PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"' > "${path}"
-chmod +x "${path}"
+if [[ ! -f "${config}" ]]; then
+    echo 'export PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"' > "${config}"
+    chmod +x "${config}"
+fi
