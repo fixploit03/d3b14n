@@ -7,7 +7,7 @@ path_bin=/usr/local/bin
 #--------------
 # archiver
 #--------------
-apt install -y zip unzip 7zip
+apt install -y zip unzip 7zip xarchiver
 #
 # rar
 cd "${path_apps}"
