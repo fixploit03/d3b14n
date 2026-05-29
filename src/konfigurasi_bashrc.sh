@@ -3,11 +3,15 @@
 bashrc=~/.bashrc
 config=/etc/skel/.bashrc
 
-# backup bashrc
-cp "${bashrc}" "${bashrc}.bak"
+if [[ -f "${bashrc}" ]]; then
+    # backup bashrc
+    cp "${bashrc}" "${bashrc}.bak"
 
-# copy template bashrc
-cp "${config}" "${bashrc}"
+    if [[ -f "${config}" ]]; then
+        # copy template bashrc
+        cp "${config}" "${bashrc}"
 
-# ubah warna prompt
-sed -i 's/01;32m/01;31m/g' "${bashrc}"
+        # ubah warna prompt
+        sed -i 's/01;32m/01;31m/g' "${bashrc}"
+    fi
+fi
