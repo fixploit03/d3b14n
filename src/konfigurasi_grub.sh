@@ -1,18 +1,21 @@
 #!/bin/bash
 
-file="/etc/default/grub"
+config="/etc/default/grub"
 status=0
 
-if [[ -f "${file}" ]]; then
+if [[ -f "${config}" ]]; then
+	# backup
+	cp "${config}" "${config}.bak"
+
 	# ubah nama interface dari wlx ke wlan
-	if ! grep -q "net.ifnames=0 biosdevname=0" "${file}"; then
-		sed -i '/GRUB_CMDLINE_LINUX_DEFAULT/ s/"$/ net.ifnames=0 biosdevname=0"/' "${file}"
+	if ! grep -q "net.ifnames=0 biosdevname=0" "${config}"; then
+		sed -i '/GRUB_CMDLINE_LINUX_DEFAULT/ s/"$/ net.ifnames=0 biosdevname=0"/' "${config}"
 		status=1
 	fi
 
 	# disable ipv6
-	if ! grep -q "ipv6.disable=1" "${file}"; then
-        	sed -i '/GRUB_CMDLINE_LINUX_DEFAULT/ s/"$/ ipv6.disable=1"/' "${file}"
+	if ! grep -q "ipv6.disable=1" "${config}"; then
+        	sed -i '/GRUB_CMDLINE_LINUX_DEFAULT/ s/"$/ ipv6.disable=1"/' "${config}"
 		status=1
 	fi
 
