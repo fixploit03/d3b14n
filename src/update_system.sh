@@ -1,4 +1,5 @@
 #!/bin/bash
 
-apt update && apt full-upgrade -y
+apt update -y
+apt full-upgrade -y
 apt autoremove --purge -y
