@@ -6,6 +6,8 @@ path_saat_ini=$(pwd)
 path_apps=../apps
 path_bin=/usr/local/bin
 
+sudo apt update
+
 #--------------
 # archiver
 #--------------
@@ -25,7 +27,12 @@ cd "${path_saat_ini}"
 #--------------
 # tampilan
 #--------------
-sudo apt install -y papirus-icon-theme
+sudo apt install -y numix-gtk-theme papirus-icon-theme numix-icon-theme
+
+#--------------
+# set theme
+#--------------
+gsettings set org.mate.interface gtk-theme "Numix"
 
 #--------------
 # set wallpaper
