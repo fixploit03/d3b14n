@@ -25,6 +25,11 @@ rm rarlinux-x64-722.tar.gz
 cd "${path_saat_ini}"
 
 #--------------
+# terminal
+#--------------
+sudo apt install -y terminator
+
+#--------------
 # tampilan
 #--------------
 sudo apt install -y numix-gtk-theme papirus-icon-theme numix-icon-theme
@@ -50,3 +55,8 @@ cd "${path_saat_ini}"
 # set icon
 #--------------
 gsettings set org.mate.interface icon-theme "Papirus-Dark"
+
+#--------------
+# set terminal
+#--------------
+gsettings set org.mate.applications.terminal exec "terminator"
