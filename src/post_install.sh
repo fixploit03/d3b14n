@@ -59,4 +59,4 @@ gsettings set org.mate.interface icon-theme "Papirus-Dark"
 #--------------
 # set terminal
 #--------------
-gsettings set org.mate.applications.terminal exec "terminator"
+gsettings set org.mate.applications-terminal exec "terminator"
