@@ -27,7 +27,7 @@ cd "${path_saat_ini}"
 #--------------
 # terminal
 #--------------
-sudo apt install -y terminator
+sudo apt install -y terminator fonts-jetbrains-mono
 
 #--------------
 # tampilan
