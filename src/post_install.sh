@@ -35,6 +35,11 @@ sudo apt install -y numix-gtk-theme papirus-icon-theme numix-icon-theme
 gsettings set org.mate.interface gtk-theme "Numix"
 
 #--------------
+# set window
+#--------------
+gsettings set org.mate.Marco.general theme "Numix"
+
+#--------------
 # set wallpaper
 #--------------
 cd ../wallpapers
