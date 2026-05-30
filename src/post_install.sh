@@ -23,8 +23,18 @@ rm rarlinux-x64-722.tar.gz
 cd "${path_saat_ini}"
 
 #--------------
+# tampilan
+#--------------
+sudo apt install -y papirus-icon-theme
+
+#--------------
 # set wallpaper
 #--------------
 cd ../wallpapers
 gsettings set org.mate.background picture-filename "$(pwd)/debian.jpg"
 cd "${path_saat_ini}"
+
+#--------------
+# set icon
+#--------------
+gsettings set org.mate.interface icon-theme "Papirus-Dark"
