@@ -60,3 +60,5 @@ gsettings set org.mate.interface icon-theme "Papirus-Dark"
 # set terminal
 #--------------
 gsettings set org.mate.applications-terminal exec "terminator"
+mkdir -p ~/.config/terminator
+cp ../config/terminator ~/.config/terminator/config
