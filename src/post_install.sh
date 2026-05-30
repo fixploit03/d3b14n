@@ -7,7 +7,7 @@ path_bin=/usr/local/bin
 #--------------
 # archiver
 #--------------
-apt install -y zip unzip 7zip xarchiver
+sudo apt install -y zip unzip 7zip xarchiver
 #
 # rar
 cd "${path_apps}"
@@ -19,3 +19,9 @@ cd ..
 rm -rf rar
 rm rarlinux-x64-722.tar.gz
 cd "${path_saat_ini}"
+
+#--------------
+# set wallpaper
+#--------------
+cd ../wallpapers
+gsettings set org.mate.background picture-filename "${path_saat_ini}/debian.jpg"
