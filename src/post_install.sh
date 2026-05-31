@@ -70,4 +70,4 @@ sudo apt install -y build-essential linux-headers-$(uname -r) dkms perl
 sudo mount /dev/cdrom /mnt
 sudo /mnt/VBoxLinuxAdditions.run
 # sudo usermod -aG vboxsf $USER
-sudo reboot
+# sudo reboot
