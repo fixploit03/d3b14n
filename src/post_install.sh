@@ -9,6 +9,11 @@ path_bin=/usr/local/bin
 sudo apt update
 
 #--------------
+# utils
+#--------------
+sudo apt install -y curl wget tree tmux rsync net-tools fastfetch htop btop plocate bash-completion build-essential
+    
+#--------------
 # archiver
 #--------------
 sudo apt install -y zip unzip 7zip xarchiver
@@ -38,7 +43,7 @@ sudo apt install -y numix-gtk-theme papirus-icon-theme numix-icon-theme
 # virtualbox guest additions
 #--------------
 if [[ $(systemd-detect-virt) == "oracle" ]]; then
-    sudo apt install -y build-essential linux-headers-$(uname -r) dkms perl
+    sudo apt install -y linux-headers-$(uname -r) dkms perl
     sudo mount /dev/cdrom /mnt
     if [[ -f /mnt/VBoxLinuxAdditions.run ]]; then
         sudo /mnt/VBoxLinuxAdditions.run
@@ -79,6 +84,8 @@ mkdir -p ~/.config/terminator
 cp ../config/terminator ~/.config/terminator/config
 
 #--------------
-# kelar
+# Selesai
 #--------------
+sudo updatedb
+read -p "Tekan [Enter] untuk reboot..."
 sudo reboot
