@@ -4,6 +4,10 @@
 
 [https://cdimage.debian.org/cdimage/archive/13.4.0/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/13.4.0/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso)
 
+## Syarat
+- Debian: 13 (Trixie)
+- Desktop Environment : Mate
+  
 ## Setup
 
 ```bash
