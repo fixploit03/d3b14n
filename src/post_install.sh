@@ -64,7 +64,7 @@ mkdir -p ~/.config/terminator
 cp ../config/terminator ~/.config/terminator/config
 
 #--------------
-# virtualbox guest additions
+# instal virtualbox guest additions
 #--------------
 sudo apt install -y build-essential linux-headers-$(uname -r) dkms perl
 sudo mount /dev/cdrom /mnt
