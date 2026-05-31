@@ -4,11 +4,11 @@
 
 source setup/cek_root.sh
 
-bash setup/update_system.sh
-bash setup/konfigurasi_sudo.sh
 bash setup/konfigurasi_path_environment_variable.sh
 bash setup/konfigurasi_network.sh
 bash setup/konfigurasi_bashrc.sh
+bash setup/update_system.sh
+bash setup/instal_sudo.sh
 bash setup/instal_utils.sh
 bash setup/instal_archiver.sh
 bash setup/instal_tampilan.sh
