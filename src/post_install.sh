@@ -62,3 +62,12 @@ gsettings set org.mate.interface icon-theme "Papirus-Dark"
 gsettings set org.mate.applications-terminal exec "terminator"
 mkdir -p ~/.config/terminator
 cp ../config/terminator ~/.config/terminator/config
+
+#--------------
+# virtualbox guest additions
+#--------------
+sudo apt install -y build-essential linux-headers-$(uname -r) dkms perl
+sudo mount /dev/cdrom /mnt
+sudo /mnt/VBoxLinuxAdditions.run
+sudo usermod -aG vboxsf $USER
+sudo reboot
