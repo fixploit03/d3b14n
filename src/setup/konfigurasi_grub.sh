@@ -21,6 +21,6 @@ if [[ -f "${config}" ]]; then
 
 	if [[ "${status}" -eq 1 ]]; then
 		/sbin/grub-mkconfig -o /boot/grub/grub.cfg
-		/sbin/reboot
+		# /sbin/reboot
 	fi
 fi
