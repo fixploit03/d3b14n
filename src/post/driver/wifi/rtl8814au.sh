@@ -14,7 +14,7 @@ for d in "${dependensi[@]}"; do
 done
 
 cd /usr/local/src
-git clone https://github.com/joseguzman1337/8814au
+git clone https://github.com/morrownr/8814au
 cd 8814au
 
 make -j$(nproc)
