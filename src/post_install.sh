@@ -42,7 +42,7 @@ sudo apt install -y numix-gtk-theme papirus-icon-theme numix-icon-theme
 #--------------
 # 802.11
 #--------------
-sudo apt install -y wireless-tools iw aircrack-ng pixiewps reaver bully mdk3 mdk4 macchanger cowpatty hcxdumptool hcxtools hcxkeys bettercap wifite wireshark tshark
+sudo apt install -y wireless-tools iw aircrack-ng pixiewps reaver bully mdk3 mdk4 macchanger cowpatty hcxdumptool hcxtools hcxkeys bettercap wifite wireshark tshark horst wavemon
 #
 # hostapd-wpe
 sudo dpkg -i "${path_apps}/80211/libunsafessl1.0.2_1.0.2u-0kali2_amd64.deb" "${path_apps}/80211/hostapd-wpe_2.10+git20220310-0kali3_amd64.deb"
