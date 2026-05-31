@@ -35,6 +35,21 @@ sudo apt install -y terminator fonts-jetbrains-mono
 sudo apt install -y numix-gtk-theme papirus-icon-theme numix-icon-theme
 
 #--------------
+# virtualbox guest additions
+#--------------
+if [[ $(systemd-detect-virt) == "oracle" ]]; then
+    sudo apt install -y build-essential linux-headers-$(uname -r) dkms perl
+    sudo mount /dev/cdrom /mnt
+    if [[ -f /mnt/VBoxLinuxAdditions.run ]]; then
+        sudo /mnt/VBoxLinuxAdditions.run
+        sudo usermod -aG vboxsf $USER
+    else
+        echo "[-] ISO Guest Additions belum di-insert!"
+        exit 1
+    fi
+fi
+
+#--------------
 # set theme
 #--------------
 gsettings set org.mate.interface gtk-theme "Numix"
@@ -64,10 +79,6 @@ mkdir -p ~/.config/terminator
 cp ../config/terminator ~/.config/terminator/config
 
 #--------------
-# instal virtualbox guest additions
+# kelar
 #--------------
-sudo apt install -y build-essential linux-headers-$(uname -r) dkms perl
-sudo mount /dev/cdrom /mnt
-sudo /mnt/VBoxLinuxAdditions.run
-sudo usermod -aG vboxsf $USER
 sudo reboot
