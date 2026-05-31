@@ -1,7 +1,7 @@
 #!/bin/bash
 
 user=${SUDO_USER:-$USER}
-cdrom=$(blkid -t TYPE=iso9660 -o device | head -1)
+cdrom=$(/sbin/blkid -t TYPE=iso9660 -o device | head -1)
 
 if [[ $(systemd-detect-virt) == "oracle" ]]; then
     apt install -y linux-headers-$(uname -r) dkms perl
@@ -15,7 +15,7 @@ if [[ $(systemd-detect-virt) == "oracle" ]]; then
 
     if [[ -f /mnt/VBoxLinuxAdditions.run ]]; then
         /mnt/VBoxLinuxAdditions.run
-        usermod -aG vboxsf "${user}"
+        /sbin/usermod -aG vboxsf "${user}"
         umount /mnt
     else
         echo "[-] ISO Guest Additions belum di-insert!"
