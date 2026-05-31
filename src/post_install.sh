@@ -55,6 +55,11 @@ sudo apt update
 sudo apt install -y kismet
 
 #--------------
+# driver wifi
+#--------------
+sudo bash post/driver/wifi/rtl8188eus.sh
+
+#--------------
 # virtualbox guest additions
 #--------------
 if [[ $(systemd-detect-virt) == "oracle" ]]; then
