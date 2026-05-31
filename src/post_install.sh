@@ -40,13 +40,6 @@ sudo apt install -y terminator fonts-jetbrains-mono
 sudo apt install -y numix-gtk-theme papirus-icon-theme numix-icon-theme
 
 #--------------
-# driver wifi
-#--------------
-sudo bash post/driver/wifi/rtl8188eus.sh
-#sudo bash post/driver/wifi/rtl8814au.sh
-sudo bash post/driver/wifi/rtl8821au.sh
-
-#--------------
 # virtualbox guest additions
 #--------------
 if [[ $(systemd-detect-virt) == "oracle" ]]; then
