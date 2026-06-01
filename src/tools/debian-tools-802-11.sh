@@ -17,12 +17,12 @@ apt install -y -f
 rm fern-wifi-cracker_3.6-0kali1_all.deb
 
 # hostapd-wpe
-dpkg -i "${path_apps}/80211/libunsafessl1.0.2_1.0.2u-0kali2_amd64.deb" "${path_apps}/80211/hostapd-wpe_2.10+git20220310-0kali3_amd64.deb"
+dpkg -i "${path_apps}/libunsafessl1.0.2_1.0.2u-0kali2_amd64.deb" "${path_apps}/hostapd-wpe_2.10+git20220310-0kali3_amd64.deb"
 apt install -y -f
 
 # hostapd-mana
 git clone https://github.com/sensepost/hostapd-mana "${path_instal}/hostapd-mana"
-cd hostapd-mana
+cd "${path_instal}/hostapd-mana"
 make -C hostapd -j$(nproc)
 mv hostapd/hostapd /usr/local/bin/hostapd-mana
 mv hostapd/hostapd_cli /usr/local/bin/hostapd-mana_cli
