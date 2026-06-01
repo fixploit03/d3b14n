@@ -1,7 +1,6 @@
 #!/bin/bash
 
 path_saat_ini=$(pwd)
-path_apps=../../apps/80211
 path_instal=/opt/tools/80211
 
 if [[ ! -d "${path_instal}" ]]; then
@@ -10,6 +9,12 @@ fi
 
 apt install -y wireless-tools iw aircrack-ng pixiewps reaver bully mdk3 mdk4 macchanger cowpatty hcxdumptool hcxtools hcxkeys bettercap wifite horst wavemon linssid
 
+# wifiphisher
+wget https://http.kali.org/pool/main/p/python-roguehostapd/python3-roguehostapd_1.2.3%2Bgit20191209-0kali4%2Bb1_amd64.deb https://kali.download/kali/pool/main/w/wifiphisher/wifiphisher_1.4%2Bgit20260522-0kali1_all.deb
+dpkg -i python3-roguehostapd_1.2.3+git20191209-0kali4+b1_amd64.deb wifiphisher_1.4+git20260522-0kali1_all.deb
+apt install -y -f
+rm python3-roguehostapd_1.2.3+git20191209-0kali4+b1_amd64.deb wifiphisher_1.4+git20260522-0kali1_all.deb
+
 # fern-wifi-cracker
 wget https://http.kali.org/pool/main/f/fern-wifi-cracker/fern-wifi-cracker_3.6-0kali1_all.deb
 dpkg -i fern-wifi-cracker_3.6-0kali1_all.deb
@@ -17,8 +22,10 @@ apt install -y -f
 rm fern-wifi-cracker_3.6-0kali1_all.deb
 
 # hostapd-wpe
-dpkg -i "${path_apps}/libunsafessl1.0.2_1.0.2u-0kali2_amd64.deb" "${path_apps}/hostapd-wpe_2.10+git20220310-0kali3_amd64.deb"
+wget https://old.kali.org/kali/pool/main/u/unsafeopenssl/libunsafessl1.0.2_1.0.2u-0kali2_amd64.deb https://http.kali.org/pool/main/h/hostapd-wpe/hostapd-wpe_2.10%2Bgit20220310-0kali3_amd64.deb
+dpkg -i libunsafessl1.0.2_1.0.2u-0kali2_amd64.deb hostapd-wpe_2.10+git20220310-0kali3_amd64.deb
 apt install -y -f
+rm libunsafessl1.0.2_1.0.2u-0kali2_amd64.deb hostapd-wpe_2.10+git20220310-0kali3_amd64.deb
 
 # hostapd-mana
 git clone https://github.com/sensepost/hostapd-mana "${path_instal}/hostapd-mana"
