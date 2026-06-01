@@ -10,6 +10,12 @@ fi
 
 apt install -y wireless-tools iw aircrack-ng pixiewps reaver bully mdk3 mdk4 macchanger cowpatty hcxdumptool hcxtools hcxkeys bettercap wifite horst wavemon linssid
 
+# fern-wifi-cracker
+wget https://http.kali.org/pool/main/f/fern-wifi-cracker/fern-wifi-cracker_3.6-0kali1_all.deb
+dpkg -i fern-wifi-cracker_3.6-0kali1_all.deb
+apt install -y -f
+rm fern-wifi-cracker_3.6-0kali1_all.deb
+
 # hostapd-wpe
 dpkg -i "${path_apps}/80211/libunsafessl1.0.2_1.0.2u-0kali2_amd64.deb" "${path_apps}/80211/hostapd-wpe_2.10+git20220310-0kali3_amd64.deb"
 apt install -y -f
