@@ -7,7 +7,7 @@ if [[ ! -d "${path_instal}" ]]; then
     mkdir -p "${path_instal}"
 fi
 
-apt install -y wireless-tools iw aircrack-ng pixiewps reaver bully mdk3 mdk4 macchanger cowpatty hcxdumptool hcxtools hcxkeys bettercap wifite horst wavemon linssid
+apt install -y wireless-tools iw aircrack-ng airgraph-ng pixiewps reaver bully mdk3 mdk4 macchanger cowpatty hcxdumptool hcxtools hcxkeys bettercap wifite horst wavemon linssid
 
 # wifiphisher
 wget https://http.kali.org/pool/main/p/python-roguehostapd/python3-roguehostapd_1.2.3%2Bgit20191209-0kali4%2Bb1_amd64.deb https://kali.download/kali/pool/main/w/wifiphisher/wifiphisher_1.4%2Bgit20260522-0kali1_all.deb
