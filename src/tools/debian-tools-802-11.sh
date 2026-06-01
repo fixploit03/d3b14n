@@ -15,7 +15,6 @@ dpkg -i "${path_apps}/80211/libunsafessl1.0.2_1.0.2u-0kali2_amd64.deb" "${path_a
 apt install -y -f
 
 # hostapd-mana
-apt install -y build-essential git libnl-genl-3-dev libssl-dev pkg-config
 git clone https://github.com/sensepost/hostapd-mana "${path_instal}/hostapd-mana"
 cd hostapd-mana
 make -C hostapd -j$(nproc)
