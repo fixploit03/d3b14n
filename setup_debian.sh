@@ -23,5 +23,5 @@ for s in "${script[@]}"; do
 done
 
 echo -e "\n[+] Setup Debian selesai!"
-read -p "Tekan [Enter] untuk reboot..."
+read -p "[*] Tekan [Enter] untuk reboot..."
 /sbin/reboot
