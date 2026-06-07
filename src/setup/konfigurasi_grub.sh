@@ -4,6 +4,8 @@ config="/etc/default/grub"
 status=0
 
 if [[ -f "${config}" ]]; then
+    echo "[*] Konfigurasi grub..."
+	
 	# backup
 	cp "${config}" "${config}.bak"
 
@@ -21,6 +23,5 @@ if [[ -f "${config}" ]]; then
 
 	if [[ "${status}" -eq 1 ]]; then
 		/sbin/grub-mkconfig -o /boot/grub/grub.cfg
-		# /sbin/reboot
 	fi
 fi
