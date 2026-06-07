@@ -4,6 +4,8 @@ bashrc=~/.bashrc
 config=/etc/skel/.bashrc
 
 if [[ -f "${bashrc}" ]]; then
+    echo "[*] Konfigurasi .bashrc..."
+    
     # backup bashrc
     cp "${bashrc}" "${bashrc}.bak"
 
