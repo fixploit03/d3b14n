@@ -9,9 +9,6 @@ SCRIPT=(
     "update_system.sh"
     "instal_sudo.sh"
     "instal_utils.sh"
-    "instal_archiver.sh"
-    "instal_tampilan.sh"
-    "instal_terminal.sh"
     "konfigurasi_grub.sh"
 )
 
@@ -26,3 +23,4 @@ for s in "${SCRIPT[@]}"; do
 done
 
 echo -e "\n[+] Setup Debian selesai!"
+read -p "Tekan [Enter] untuk reboot..."
