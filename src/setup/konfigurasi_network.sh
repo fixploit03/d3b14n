@@ -3,6 +3,8 @@
 config=/etc/network/interfaces
 
 if [[ -f "${config}" ]]; then
+    echo "[*] Konfigurasi jaringan..."
+    
     # backup
     cp "${config}" "${config}.bak"
 
