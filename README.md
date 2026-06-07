@@ -1,20 +1,10 @@
-# d3b14n
-
-## Download ISO
-
-[https://cdimage.debian.org/cdimage/archive/13.4.0/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso](https://cdimage.debian.org/cdimage/archive/13.4.0/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso)
-
-## Syarat
-- Debian: 13 (Trixie)
-- Desktop Environment : Mate
-  
-## Setup
+# Setup d3b14n
 
 ```bash
 su -
 apt update && apt install -y git
 git clone https://github.com/fixploit03/d3b14n.git
-cd d3b14n/src
+cd d3b14n
 chmod +x setup_debian.sh
 ./setup_debian.sh
 ```
