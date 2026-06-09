@@ -1,4 +1,7 @@
 [begin] (fluxbox)
+[submenu] (Terminal)
+	[exec] (Terminator) {terminator}
+[end]
 [submenu] (Pentesting)
 	[submenu] (802.11)
 		[submenu] (aircrack-ng)
@@ -75,9 +78,6 @@
 			[exec] (iwspy) {terminator -e "iwspy -h; bash"}
 		[end]
 	[end]
-[end]
-[submenu] (Terminal)
-	[exec] (Terminator) {terminator}
 [end]
 [include] (/etc/X11/fluxbox/fluxbox-menu)
 [end]
