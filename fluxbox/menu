@@ -1,0 +1,83 @@
+[begin] (fluxbox)
+[submenu] (Pentesting)
+	[submenu] (802.11)
+		[submenu] (aircrack-ng)
+			[exec] (airbase-ng) {terminator -e "sudo airbase-ng; bash"}
+			[exec] (aircrack-ng) {terminator -e "aircrack-ng -H; bash"}
+			[exec] (airdecap-ng) {terminator -e "airdecap-ng -H; bash"}
+			[exec] (airdecloak-ng) {terminator -e "airdecloak-ng -h; bash"}
+			[exec] (aireplay-ng) {terminator -e "sudo aireplay-ng -H; bash"}
+			[exec] (airgraph-ng) {terminator -e "airgraph-ng -h; bash"}
+			[exec] (airmon-ng) {terminator -e "sudo airmon-ng; bash"}
+			[exec] (airodump-ng) {terminator -e "sudo airodump-ng -H; bash"}
+			[exec] (airodump-ng-oui-update) {terminator -e "sudo airodump-ng-oui-update; bash"}
+			[exec] (airolib-ng) {terminator -e "airolib-ng; bash"}
+			[exec] (airserv-ng) {terminator -e "sudo airserv-ng -h; bash"}
+			[exec] (airtun-ng) {terminator -e "sudo airtun-ng -H; bash"}
+			[exec] (airventriloquist-ng) {terminator -e "sudo airventriloquist-ng --help; bash"}
+			[exec] (besside-ng) {terminator -e "sudo besside-ng -h; bash"}
+			[exec] (besside-ng-crawler) {terminator -e "besside-ng-crawler; bash"}
+			[exec] (buddy-ng) {terminator -e "buddy-ng -h; bash"}
+			[exec] (dcrack) {terminator -e "dcrack; bash"}
+			[exec] (easside-ng) {terminator -e "sudo easside-ng -h; bash"}
+			[exec] (ivstools) {terminator -e "ivstools; bash"}
+			[exec] (kstats) {terminator -e "kstats; bash"}
+			[exec] (makeivs-ng) {terminator -e "makeivs-ng --help; bash"}
+			[exec] (packetforge-ng) {terminator -e "packetforge-ng -H; bash"}
+			[exec] (tkiptun-ng) {terminator -e "sudo tkiptun-ng -H; bash"}
+			[exec] (wesside-ng) {terminator -e "sudo wesside-ng -h; bash"}
+			[exec] (wpaclean) {terminator -e "wpaclean; bash"}
+		[end]
+		[exec] (airgeddon) {terminator -e "sudo airgeddon; bash"}
+		[exec] (airgorah) {terminator -e "bash -c 'sudo -E airgorah'"}
+		[exec] (asleap) {terminator -e "asleap -h; bash"}
+		[exec] (bully) {terminator -e "bully -h; bash"}
+		[submenu] (cowpatty)
+			[exec] (cowpatty) {terminator -e "cowpatty -h; bash"}
+			[exec] (genpmk) {terminator -e "genpmk -h; bash"}
+		[end]
+		[exec] (eapmd5pass) {terminator -e "eapmd5pass -h; bash"}
+		[exec] (fern-wifi-cracker) {terminator -e "bash -c 'sudo -E fern-wifi-cracker'"}
+		[exec] (hcxdumptool) {terminator -e "hcxdumptool -h; bash"}
+		[submenu] (hcxkeys)
+			[exec] (wlangenpmk) {terminator -e "wlangenpmk -h; bash"}
+			[exec] (wlangenpmkocl) {terminator -e "wlangenpmkocl -h; bash"}
+		[end]
+		[submenu] (hcxtools)
+			[exec] (hcxeiutool) {terminator -e "hcxeiutool -h; bash"}
+			[exec] (hcxhash2cap) {terminator -e "hcxhash2cap -h; bash"}
+			[exec] (hcxhashtool) {terminator -e "hcxhashtool -h; bash"}
+			[exec] (hcxpcapngtool) {terminator -e "hcxpcapngtool -h; bash"}
+			[exec] (hcxpmktool) {terminator -e "hcxpmktool -h; bash"}
+			[exec] (hcxpsktool) {terminator -e "hcxpsktool -h; bash"}
+			[exec] (hcxwltool) {terminator -e "hcxwltool -h; bash"}
+			[exec] (whoismac) {terminator -e "whoismac -h; bash"}
+			[exec] (wlancap2wpasec) {terminator -e "wlancap2wpasec -h; bash"}
+		[end]
+		[exec] (hostapd-mana) {terminator -e "sudo hostapd-mana -h; bash"}
+		[exec] (hostapd-wpe) {terminator -e "sudo hostapd-wpe -h; bash"}
+		[exec] (iw) {terminator -e "sudo iw; bash"}
+		[exec] (macchanger) {terminator -e "macchanger -h; bash"}
+		[exec] (mdk3) {terminator -e "sudo mdk3 --help; bash"}
+		[exec] (mdk4) {terminator -e "sudo mdk4 --help; bash"}
+		[exec] (pixiewps) {terminator -e "pixiewps -h; bash"}
+		[submenu] (reaver)
+			[exec] (reaver) {terminator -e "reaver -h; bash"}
+			[exec] (wash) {terminator -e "wash -h; bash"}
+		[end]
+		[exec] (wifite) {terminator -e "sudo wifite -h; bash"}
+		[submenu] (wireless-tools)
+			[exec] (iwconfig) {terminator -e "sudo iwconfig -h; bash"}
+			[exec] (iwevent) {terminator -e "sudo iwevent -h; bash"}
+			[exec] (iwgetid) {terminator -e "sudo iwgetid -h; bash"}
+			[exec] (iwlist) {terminator -e "sudo iwlist -h; bash"}
+			[exec] (iwpriv) {terminator -e "sudo iwpriv -h; bash"}
+			[exec] (iwspy) {terminator -e "iwspy -h; bash"}
+		[end]
+	[end]
+[end]
+[submenu] (Terminal)
+	[exec] (Terminator) {terminator}
+[end]
+[include] (/etc/X11/fluxbox/fluxbox-menu)
+[end]
