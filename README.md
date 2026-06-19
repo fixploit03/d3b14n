@@ -1,4 +1,4 @@
-# Setup d3b14n
+# Setup Debian
 
 ```bash
 su -
