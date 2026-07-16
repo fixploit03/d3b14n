@@ -14,7 +14,7 @@ apt install -y sudo
 
 if [[ ! -f /etc/profile.d/set-path.sh ]]; then
     echo 'export PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"' > /etc/profile.d/set-path.sh
-    chmod +x "${config}"
+    chmod +x /etc/profile.d/set-path.sh
 fi
 
 echo -e "\n[+] Setup Debian selesai!"
