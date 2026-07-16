@@ -1,26 +1,21 @@
 #!/bin/bash
 set -e
 
-script=(
-    "cek_root.sh"
-    "konfigurasi_path_environment_variable.sh"
-    "konfigurasi_network.sh"
-    "konfigurasi_bashrc.sh"
-    "update_system.sh"
-    "instal_sudo.sh"
-    "instal_utils.sh"
-    "konfigurasi_grub.sh"
-)
+if [[ $EUID -ne 0 ]]; then
+	echo "[-] Script ini harus dijalankan sebagai root!"
+	exit 1
+fi
 
-dir=src/setup/
+apt update
 
-for s in "${script[@]}"; do
-    if [[ "${s}" == "cek_root.sh" || "${s}" == "konfigurasi_path_environment_variable.sh" ]]; then
-        source "${dir}/${s}"
-    else
-        bash "${dir}/${s}"
-    fi
-done
+user=${SUDO_USER:-$USER}
+apt install -y sudo
+/sbin/usermod -aG sudo "${user}"
+
+if [[ ! -f /etc/profile.d/set-path.sh ]]; then
+    echo 'export PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"' > /etc/profile.d/set-path.sh
+    chmod +x "${config}"
+fi
 
 echo -e "\n[+] Setup Debian selesai!"
 read -p "[*] Tekan [Enter] untuk reboot..."
