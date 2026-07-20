@@ -1,29 +1,22 @@
 #!/bin/bash
 set -euo pipefail
 
-if [[ ${EUID} -ne 0 ]]; then
+if [[ $EUID -ne 0 ]]; then
 	echo "ERROR: Script ini harus dijalankan sebagai root!"
 	exit 1
 fi
 
-read -rp "Mau menggunakan repositori Testing? [Y/n]: " nanya
-
-nanya="${nanya:-Y}"
+read -p "Mau menggunakan repositori Testing? [Y/n]: " nanya
 
 case "${nanya}" in
 	y|Y)
 		cp /etc/apt/sources.list /etc/apt/sources.list.bak
-		cat << 'EOF' > /etc/apt/sources.list
+		cat << EOF > /etc/apt/sources.list
 deb https://ftp.debian.org/debian/ testing contrib main non-free non-free-firmware
-# deb-src https://ftp.debian.org/debian/ testing contrib main non-free non-free-firmware
 deb https://ftp.debian.org/debian/ testing-updates contrib main non-free non-free-firmware
-# deb-src https://ftp.debian.org/debian/ testing-updates contrib main non-free non-free-firmware
 deb https://ftp.debian.org/debian/ testing-proposed-updates contrib main non-free non-free-firmware
-# deb-src https://ftp.debian.org/debian/ testing-proposed-updates contrib main non-free non-free-firmware
 deb https://ftp.debian.org/debian/ testing-backports contrib main non-free non-free-firmware
-# deb-src https://ftp.debian.org/debian/ testing-backports contrib main non-free non-free-firmware
 deb https://security.debian.org/debian-security/ testing-security contrib main non-free non-free-firmware
-# deb-src https://security.debian.org/debian-security/ testing-security contrib main non-free non-free-firmware
 EOF
 		;;
 	n|N)
